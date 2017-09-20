@@ -2,8 +2,8 @@
 //  HomeSignInViewController.swift
 //  MyDok
 //
-//  Created by User1 on 23.06.17.
-//  Copyright © 2017 georg syncov. All rights reserved.
+//  Created by User1 on 20.09.17.
+//  Copyright © 2017 User1. All rights reserved.
 //
 
 import UIKit
@@ -69,7 +69,7 @@ class HomeSignInViewController: UIViewController ,GIDSignInUIDelegate,VKSdkDeleg
             
             
             //regisration in Firebase Firabase.google.com
-            FIRAuth.auth()?.createUser(withEmail: vkUserEmail, password: vkUserPass , completion:  { (user, error) in
+            Auth.auth().createUser(withEmail: vkUserEmail, password: vkUserPass! , completion:  { (user, error) in
                 //check that user not nil
                 if (user != nil) {
                     
@@ -88,7 +88,7 @@ class HomeSignInViewController: UIViewController ,GIDSignInUIDelegate,VKSdkDeleg
                 else {
                     
                     //                      //signin in Firebase.google.com
-                    FIRAuth.auth()?.signIn(withEmail: vkUserEmail, password: vkUserPass, completion: { (user, error) in
+                    Auth.auth().signIn(withEmail: vkUserEmail, password: vkUserPass!, completion: { (user, error) in
                         
                         if user != nil {
                             
@@ -154,7 +154,7 @@ class HomeSignInViewController: UIViewController ,GIDSignInUIDelegate,VKSdkDeleg
     }
     
     @IBAction func facebookButton(_ sender: AnyObject) {
-        startActivityIndicator(viewController: self)
+      //  startActivityIndicator(viewController: self)
         
         AppDelegate.checkerFG = 1
         
@@ -163,7 +163,7 @@ class HomeSignInViewController: UIViewController ,GIDSignInUIDelegate,VKSdkDeleg
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (facebookResult, facebookError) in
             if facebookError != nil {
                 
-                displayAlertMessage(messageToDisplay: "There was an error logging in to Facebook. Error: \(facebookError)", viewController: self)
+//                displayAlertMessage(messageToDisplay: "There was an error logging in to Facebook. Error: \(facebookError)", viewController: self)
             } else
                 if (facebookResult?.isCancelled)!
                 {
@@ -172,10 +172,10 @@ class HomeSignInViewController: UIViewController ,GIDSignInUIDelegate,VKSdkDeleg
                 else {
                     // self.startActivityIndicator()
                     
-                    let credential = (FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString))
+                    let credential = (FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString))
                     
                     //signin in Firebase
-                    FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+                    Auth.auth().signIn(with: credential, completion: { (user, error) in
                         print("user signed into firebase")
                         if user != nil{
                             //запись польз в Firebase и userdef

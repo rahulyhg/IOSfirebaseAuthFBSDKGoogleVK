@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		199FB544B9B08AD2296023B0 /* Pods_FirebaseAuth_Google_Facebook_VK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02AE6253A1CC3B9575E6F549 /* Pods_FirebaseAuth_Google_Facebook_VK.framework */; };
+		7F152D141F72E86500020D94 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F152D131F72E86500020D94 /* Utility.swift */; };
 		7F91DD5A1F72E03000123243 /* VK_ios_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F91DD5B1F72E03000123243 /* VK_ios_sdk.framework */; };
 		7F91DD5C1F72E03900123243 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F91DD5D1F72E03900123243 /* Bolts.framework */; };
 		7F91DD5E1F72E03E00123243 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F91DD5F1F72E03E00123243 /* FBSDKLoginKit.framework */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		02AE6253A1CC3B9575E6F549 /* Pods_FirebaseAuth_Google_Facebook_VK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseAuth_Google_Facebook_VK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC0A5B2B0C40243A7283762 /* Pods-FirebaseAuth-Google+Facebook+VK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuth-Google+Facebook+VK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseAuth-Google+Facebook+VK/Pods-FirebaseAuth-Google+Facebook+VK.debug.xcconfig"; sourceTree = "<group>"; };
+		7F152D131F72E86500020D94 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		7F91DD5B1F72E03000123243 /* VK_ios_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VK_ios_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F91DD5D1F72E03900123243 /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F91DD5F1F72E03E00123243 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 				7FFCAF301F72C73E0026F5C1 /* AppDelegate.swift */,
 				7FFCAF421F72C79B0026F5C1 /* HomeSignInViewController.swift */,
 				7FFCAF431F72C79B0026F5C1 /* RegistrationViewController.swift */,
+				7F152D131F72E86500020D94 /* Utility.swift */,
 				7FFCAF441F72C79B0026F5C1 /* SignInViewController.swift */,
 				7FFCAF481F72C9F90026F5C1 /* GoogleService-Info.plist */,
 				7FFCAF341F72C73E0026F5C1 /* Main.storyboard */,
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F152D141F72E86500020D94 /* Utility.swift in Sources */,
 				7FFCAF311F72C73E0026F5C1 /* AppDelegate.swift in Sources */,
 				7FFCAF461F72C79B0026F5C1 /* RegistrationViewController.swift in Sources */,
 				7FFCAF471F72C79B0026F5C1 /* SignInViewController.swift in Sources */,

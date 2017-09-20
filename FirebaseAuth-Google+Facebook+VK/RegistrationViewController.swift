@@ -2,9 +2,8 @@
 //  RegistrationViewController.swift
 //  MyDok
 //
-//  Created by zerlik on 27.05.17.
-//  Copyright © 2017 zerlik. All rights reserved.
-//
+//  Created by User1 on 20.09.17.
+//  Copyright © 2017 User1. All rights reserved.//
 
 import UIKit
 import FirebaseAuth
@@ -49,10 +48,12 @@ class RegistrationViewController: UIViewController , UITextFieldDelegate{
         
         
         if acceptOkB.alpha == 1  {
-            displayAlertMessage(messageToDisplay: "Нажмите на согласие с правилами" , viewController: self)
+           displayAlertMessage(messageToDisplay: "Нажмите на согласие с правилами", viewController: self)
+          
+
             return
         }
-        
+        //
         let userPassword = passwordTextField.text!
         
         let email = emailTextField.text!.lowercased()//приводит все к нижнему регистру
@@ -74,15 +75,15 @@ class RegistrationViewController: UIViewController , UITextFieldDelegate{
             displayAlertMessage(messageToDisplay: "Пароль должен быть более 6 символов", viewController: self)
             return
         }
-        startActivityIndicator(viewController: self)
+     //   startActivityIndicator(viewController: self)
         
         //regisration in Firebase Firabase.google.com
-        FIRAuth.auth()?.createUser(withEmail: finalEmail, password: userPassword, completion:  { (user, error) in
+        Auth.auth().createUser(withEmail: finalEmail, password: userPassword, completion:  { (user, error) in
             //check that user not nil
             if (user != nil) {
                 
                 //обнуление userDefault
-                UserDefD.init().emptyUserData()
+          //      UserDefD.init().emptyUserData()
                 
 //                UserDefD.init().saveUserDataUD(userId: "", userEmail: "", profession: "", placeOfWork: "", phone: "", name: "", surname: "", yearB: "")
 //                UserDefD.init().saveUserImgUD(img: "")

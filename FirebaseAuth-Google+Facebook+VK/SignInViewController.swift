@@ -2,9 +2,8 @@
 //  SignInViewController.swift
 //  MyDok
 //
-//  Created by zerlik on 27.05.17.
-//  Copyright © 2017 zerlik. All rights reserved.
-//
+//  Created by User1 on 20.09.17.
+//  Copyright © 2017 User1. All rights reserved.//
 
 import UIKit
 import FirebaseAuth
@@ -47,7 +46,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func okButton(_ sender: UIButton) {
-        startActivityIndicator(viewController: self)
+      //  startActivityIndicator(viewController: self)
         
         
       
@@ -59,7 +58,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
         
         //signin in Firebase.google.com
-        FIRAuth.auth()?.signIn(withEmail: userEmail!, password: userPassword!, completion: { (user, error) in
+        Auth.auth().signIn(withEmail: userEmail!, password: userPassword!, completion: { (user, error) in
             
             if user != nil {
                 
@@ -95,7 +94,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
         //восстановдение пароля send user reset password on email
         
-        FIRAuth.auth()?.sendPasswordReset(withEmail: emailTextField.text!, completion: { (error) in
+        Auth.auth().sendPasswordReset(withEmail: emailTextField.text!, completion: { (error) in
             if error != nil{
                 displayAlertMessage(messageToDisplay: "Заполните правильно поле E-mail ", viewController: self )
             }

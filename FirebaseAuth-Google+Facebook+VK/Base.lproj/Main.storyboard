@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nnK-Pj-4fi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nnK-Pj-4fi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,7 +27,7 @@
         <!--Registration View Controller-->
         <scene sceneID="hvt-DA-oqg">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="kJ8-UH-lW6" customClass="RegistrationViewController" customModule="MyDok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="kJ8-UH-lW6" customClass="RegistrationViewController" customModule="FirebaseAuth_Google_Facebook_VK" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7nI-VA-kLj"/>
                         <viewControllerLayoutGuide type="bottom" id="fQF-e8-68Y"/>
@@ -40,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirebaseAUTH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOa-9w-ekK">
-                                <rect key="frame" x="93" y="48" width="190" height="37.5"/>
+                                <rect key="frame" x="93" y="28" width="190" height="37.5"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -201,7 +201,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="15s-KK-Hpn">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="cnP-h0-DGB" customClass="SignInViewController" customModule="MyDok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="cnP-h0-DGB" customClass="SignInViewController" customModule="FirebaseAuth_Google_Facebook_VK" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Iab-5p-6b6"/>
                         <viewControllerLayoutGuide type="bottom" id="jbu-5P-dQD"/>
@@ -214,7 +214,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirebaseAUTH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLT-QH-Dyc">
-                                <rect key="frame" x="93" y="48" width="190" height="37.5"/>
+                                <rect key="frame" x="93" y="28" width="190" height="37.5"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -356,7 +356,7 @@
         <!--View Controller-->
         <scene sceneID="I1B-4J-833">
             <objects>
-                <viewController storyboardIdentifier="ButtonVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ro9-f6-V5Q" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ButtonVC" id="ro9-f6-V5Q" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zKg-XY-zls"/>
                         <viewControllerLayoutGuide type="bottom" id="YMf-Lw-1bJ"/>
@@ -383,7 +383,7 @@
         <!--Home Sign In View Controller-->
         <scene sceneID="r0a-tC-diy">
             <objects>
-                <viewController storyboardIdentifier="HomeSignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0IO-L9-5qd" customClass="HomeSignInViewController" customModule="MyDok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeSignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0IO-L9-5qd" customClass="HomeSignInViewController" customModule="FirebaseAuth_Google_Facebook_VK" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7nR-5J-MMv"/>
                         <viewControllerLayoutGuide type="bottom" id="BVh-mb-qf2"/>
@@ -540,7 +540,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="nnK-Pj-4fi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pjf-hX-lnM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pjf-hX-lnM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -566,6 +567,6 @@
         <image name="textfield" width="254" height="178"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kUl-5u-zjP"/>
+        <segue reference="fRM-yE-la4"/>
     </inferredMetricsTieBreakers>
 </document>

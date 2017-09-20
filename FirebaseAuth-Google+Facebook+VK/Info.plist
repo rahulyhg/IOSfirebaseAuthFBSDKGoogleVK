@@ -35,7 +35,7 @@
 			</array>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1507812222595027</string>
+				<string>fb678610352348948</string>
 			</array>
 		</dict>
 		<dict>
@@ -43,14 +43,14 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>420652980436-50vp6bd9o9tgp245pv5ihj9dvu6776h5.apps.googleusercontent.com</string>
+				<string>com.googleusercontent.apps.940526443765-288h5r9u0g43l4uh55rkn3c7dkgvj7uh</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>1507812222595027</string>
+	<string>678610352348948</string>
 	<key>FacebookDisplayName</key>
 	<string>Medical Diagnosis</string>
 	<key>LSApplicationQueriesSchemes</key>

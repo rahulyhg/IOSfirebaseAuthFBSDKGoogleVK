@@ -21,22 +21,22 @@ import FBSDKLoginKit
 class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate{
     
     var window: UIWindow?
-    var databaseRef: FIRDatabaseReference!
+    var databaseRef: DatabaseReference!
     
     static var checkerFG : Int = 0
 
     
-    static var ref: FIRDatabaseReference? = FIRDatabase.database().reference()
+    static var ref: DatabaseReference? = Database.database().reference()
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        applyTheme()
+      
         
-        FIRApp.configure()
+        FirebaseApp.configure()
         
         
-        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
         
@@ -77,10 +77,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate{
         guard let authentication = user.authentication else {  print("Ошибка входа в Google ")
             return }
         
-        let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken,
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                           accessToken: authentication.accessToken)
         
-        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+        Auth.auth().signIn(with: credential, completion: { (user, error) in
             
             
             print("user signed into firebase")
@@ -117,10 +117,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate{
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         //выход из google
         
-        let firebaseAuth = FIRAuth.auth()
+        let firebaseAuth = Auth.auth()
         do {
             print("выход из Google")
-            try firebaseAuth?.signOut()
+            try firebaseAuth.signOut()
             
         } catch let signOutError as NSError {
             
